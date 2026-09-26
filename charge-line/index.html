@@ -1,0 +1,483 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>The Charge Line</title>
+<meta name="description" content="How the Christ-killer charge traveled from sermon to statute: texts that asserted it, and the rulers and councils that enforced it, sourced and graded.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F4F2EC; --ink:#211F1B; --mute:#6B6558; --line:#DAD5C6; --line-2:#C7C0AC;
+  --lapis:#2E4A8B; --slate:#5C6B7A; --sand:#A9843F; --rust:#A3392C; --moss:#3E6B4F;
+  --accent:#52798D; --accent-ink:#FBFAF6; --accent-d:#435F6D; --photo:#17A2C4;
+  --doc:var(--lapis); --power:var(--rust); --retract:var(--moss);
+  --card:#FBFAF6; --shadow:0 1px 2px rgba(33,31,27,.06), 0 4px 14px rgba(33,31,27,.05);
+  --display:"Spectral",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:6px;
+  --col:960px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1B1A17; --ink:#EDE9DE; --mute:#A39C89; --line:#3A362C; --line-2:#4A4536;
+    --lapis:#8AA3DE; --slate:#9BABBC; --sand:#D3AD6E; --rust:#E1786B; --moss:#87BB95;
+    --accent:#7FA8B8; --accent-ink:#1B1A17; --accent-d:#9DBECB; --photo:#4DC4DE;
+    --card:#242219; --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1B1A17; --ink:#EDE9DE; --mute:#A39C89; --line:#3A362C; --line-2:#4A4536;
+  --lapis:#8AA3DE; --slate:#9BABBC; --sand:#D3AD6E; --rust:#E1786B; --moss:#87BB95;
+  --accent:#7FA8B8; --accent-ink:#1B1A17; --accent-d:#9DBECB; --photo:#4DC4DE;
+  --card:#242219; --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+a{color:var(--accent)}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+
+/* ---- Object Record header template ---- */
+.wrap{max-width:var(--col);margin:0 auto;padding:0 16px}
+.headwrap{position:relative}
+header{padding:20px 0 6px}
+.updated{text-align:right;margin:0 0 6px;font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.04em}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+header h1{font-family:var(--display);font-size:32px;line-height:1.12;margin:0 0 6px;font-weight:700;letter-spacing:-0.01em}
+.subtitle{font-size:19px;color:var(--ink);margin:6px 0 2px;line-height:1.4;font-weight:500;max-width:62ch}
+.lede{font-size:16px;color:var(--mute);margin:8px 0 0;line-height:1.5;max-width:70ch}
+.xlink{margin:12px 0 0}
+.xlink a{display:inline-block;background:var(--card);color:var(--ink);border:1px solid var(--line-2);border-radius:var(--r);padding:7px 13px;text-decoration:none;font-weight:600;font-size:14.5px;margin:0 8px 6px 0;box-shadow:var(--shadow)}
+.xlink a:hover{background:var(--line)}
+.legend{font-size:14px;color:var(--mute);margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+.legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend .sw.doc{background:var(--doc)}
+.legend .sw.power{background:var(--power)}
+.legend .sw.retract{background:var(--retract)}
+.legend .sw.grade{background:transparent;border:1px solid var(--line-2)}
+
+/* how-to box: one closed line on small screens, open and floated beside the column when there is room */
+.howto{border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--shadow);margin:14px 0 2px;padding:0}
+.howto summary{cursor:pointer;list-style:none;padding:11px 15px;font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.09em;color:var(--mute);display:flex;align-items:center}
+.howto summary::-webkit-details-marker{display:none}
+.howto summary::after{content:"\25BE";margin-left:auto;font-size:13px}
+.howto[open] summary::after{content:"\25B4"}
+.howto .hbody{padding:0 15px 13px}
+.howto dl{margin:0}
+.howto dt{font-weight:600;font-size:13.5px;margin:9px 0 1px;color:var(--ink)}
+.howto dt:first-of-type{margin-top:0}
+.howto dd{margin:0;font-size:13.5px;line-height:1.42;color:var(--mute)}
+@media(min-width:1560px){
+  .howto{position:absolute;top:2px;right:calc(100% + 24px);width:252px;margin:0;z-index:8}
+  .howto summary{cursor:default;pointer-events:none}
+  .howto summary::after{display:none}
+}
+
+/* pinned strip, same build as the Object Record Timeline */
+button{font-family:var(--body);font-size:15px;line-height:1.2;cursor:pointer;border:1px solid var(--line-2);background:var(--card);color:var(--ink);padding:8px 12px;border-radius:var(--r)}
+select,input[type=search]{font-family:var(--body);font-size:15px;padding:8px 10px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--card);color:var(--ink);max-width:100%}
+#f-q{border:2px solid var(--slate)}
+.filternav{position:sticky;top:0;background:var(--paper);z-index:6;border-bottom:1px solid var(--line-2);margin:12px 0 0;padding:10px 0}
+.filternote{display:inline-block;width:fit-content;max-width:100%;background:none;border:1.5px solid var(--rust);border-radius:var(--r);color:var(--rust);font-size:12.5px;line-height:1.35;font-weight:500;padding:4px 9px;margin:8px 0 0}
+.filternote b{font-weight:700}
+.filterbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:9px 0}
+.filterbar #f-q{flex:1 1 200px;min-width:140px;order:2}
+.filterbar .count{order:3}
+.filterbar .jump{white-space:nowrap;order:4}
+.filterbar .progress{margin-left:auto;order:5}
+.ftoggle{order:1;font-family:var(--body);font-size:14.5px;font-weight:600;padding:8px 12px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px;box-shadow:var(--shadow)}
+.ftoggle:hover{background:var(--line)}
+.ftoggle.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.ftoggle .n{display:inline-flex;align-items:center;justify-content:center;min-width:16px;height:16px;padding:0 3px;border-radius:9px;background:var(--lapis);color:#fff;font-size:11px;font-weight:700;font-family:var(--mono)}
+.ftoggle .car{font-size:11px}
+.count{color:var(--mute);font-size:14px;margin:0}
+.jump{font-size:14px}
+.progress{color:var(--mute);font-size:14px;display:flex;align-items:center;gap:8px}
+.bar{height:8px;width:120px;background:var(--line);border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);width:0}
+.filters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.filters select{width:100%;min-width:0}
+@media (min-width:640px){.filters{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:900px){.filters{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:561px){.filters{position:absolute;left:0;right:0;top:100%;margin-top:0;background:var(--card);border:1px solid var(--line-2);border-top:none;border-radius:0 0 var(--r) var(--r);box-shadow:0 10px 24px rgba(0,0,0,.16);padding:14px 16px;max-height:min(70vh,560px);overflow:auto;z-index:8}}
+.fcell{display:flex;flex-direction:column;gap:4px;min-width:0}
+.fcell select{width:100%}
+.flabel{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.07em;color:var(--mute);display:flex;align-items:center;gap:5px}
+.fi{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1px solid var(--line-2);color:var(--mute);font-size:10px;font-weight:700;cursor:help;position:relative;font-family:Georgia,"Times New Roman",serif}
+.fi:hover,.fi:focus-visible{border-color:var(--lapis);color:var(--lapis);outline:none}
+.fitip{display:none;position:absolute;top:21px;left:-2px;z-index:30;width:250px;max-width:72vw;background:var(--card);border:1px solid var(--line-2);border-radius:var(--r);box-shadow:0 10px 24px rgba(0,0,0,.16);padding:10px 12px;font-size:13px;line-height:1.45;color:var(--ink);text-transform:none;letter-spacing:0;font-weight:400;font-family:var(--body)}
+.fi:hover .fitip,.fi:focus .fitip,.fi:focus-within .fitip,.fi.on .fitip{display:block}
+@media (max-width:560px){
+  /* on a phone the strip scrolls away so the reading area opens up */
+  .filternav{position:static;margin-top:8px}
+  .filters{gap:7px}
+}
+
+/* ---- the board ---- */
+.lanes{display:flex;justify-content:space-between;max-width:var(--col);margin:14px auto 0;padding:0 16px;font-size:13px;color:var(--mute)}
+.lanes b{display:block;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
+.lanes .r{text-align:right}
+#board{position:relative;max-width:var(--col);margin:6px auto 40px;padding:0 16px}
+#board::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line-2)}
+svg#links{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+svg#links path{fill:none;stroke:var(--line-2);stroke-width:1.5;stroke-dasharray:4 3}
+svg#links path.on{stroke:var(--ink);stroke-width:2.5;stroke-dasharray:none}
+svg#links text{font-family:var(--mono);font-size:11px;fill:var(--mute)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin:0 0 10px}
+.card{border:1px solid var(--line);background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:9px 11px;position:relative;cursor:pointer}
+.card:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
+.card.doc{grid-column:1;border-left:4px solid var(--doc)}
+.card.power{grid-column:2;border-right:4px solid var(--power)}
+.card.retract{grid-column:1 / span 2;border-left:4px solid var(--retract);max-width:70%;margin:0 auto}
+.card .yr{font-family:var(--mono);font-size:12.5px;color:var(--mute)}
+.card .ttl{font-family:var(--display);font-weight:700;font-size:16px;margin:2px 0 1px}
+.card .who{font-size:13px;color:var(--mute)}
+.card .what{font-size:14px;margin:6px 0 0}
+.card .more{display:none;margin-top:8px;border-top:1px solid var(--line);padding-top:8px;font-size:13px}
+.card.open .more{display:block}
+.more .k{display:inline-block;font-family:var(--mono);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--power);margin-right:6px}
+.card.doc .more .k{color:var(--doc)}
+.card.retract .more .k{color:var(--retract)}
+.more p{margin:0 0 5px}
+.more .ph{display:block;max-width:100%;max-height:260px;object-fit:contain;border:1px solid var(--line-2);border-radius:var(--r);background:var(--line);margin:0 0 4px;cursor:zoom-in}
+.more .cr{font-size:12px;color:var(--mute);margin:0 0 10px;line-height:1.35}
+.picmark{display:inline-block;vertical-align:middle;margin-left:7px;width:15px;height:12px;border:1.5px solid var(--photo);border-radius:2px;position:relative;flex:none}
+.picmark::before{content:"";position:absolute;right:1.5px;top:1.5px;width:2.5px;height:2.5px;border-radius:50%;background:var(--photo)}
+.picmark::after{content:"";position:absolute;left:1.5px;bottom:1.5px;width:0;height:0;border-left:4px solid transparent;border-right:3px solid transparent;border-bottom:4px solid var(--photo)}
+.legend .picmark{margin-left:0;margin-right:6px}
+.lightbox{position:fixed;inset:0;background:rgba(20,20,19,.9);z-index:70;display:none;align-items:center;justify-content:center;padding:32px}
+.lightbox.on{display:flex}
+.lightbox img{max-width:92vw;max-height:92vh;border-radius:var(--r);box-shadow:0 20px 60px rgba(0,0,0,.5);display:block}
+.lightbox .lbx{position:fixed;top:18px;right:18px;width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.12);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;padding:0}
+.more .acts{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+.more .acts button{font-size:14px;padding:7px 14px;font-weight:600}
+.more .acts button.done{background:var(--moss);color:#fff;border-color:var(--moss)}
+.card .learnmark{position:absolute;top:9px;right:11px;color:var(--moss);font-size:12.5px;font-weight:600;font-family:var(--body)}
+.grade{display:inline-block;border:1px solid var(--line-2);padding:0 6px;font-family:var(--mono);font-size:11px;margin-left:6px;vertical-align:1px;border-radius:3px}
+.hidden{display:none}
+.empty{color:var(--mute);padding:26px 0;text-align:center;font-size:15px}
+.note{max-width:var(--col);margin:0 auto 30px;padding:0 16px;font-size:13px;color:var(--mute)}
+.note p{max-width:70ch}
+.foot{max-width:var(--col);margin:0 auto 30px;padding:12px 16px 0;color:var(--mute);font-size:13px;border-top:1px solid var(--line-2)}
+@media (max-width:520px){
+  body{font-size:15px}
+  header h1{font-size:28px}
+  .eyebrow{font-size:11.5px;letter-spacing:.05em}
+  .row{gap:0 40px}
+  .card{padding:8px 9px}
+  .card .what{font-size:13px}
+  .card.retract{max-width:100%}
+}
+</style>
+
+<div class="wrap headwrap">
+<header>
+  <p class="updated">Last updated: September 10, 2026</p>
+  <p class="eyebrow">Object Record &middot; Companion map, 270 BCE to 1994</p>
+  <h1>The Charge Line</h1>
+  <p class="subtitle">How the Christ-killer charge travelled from sermon to statute.</p>
+  <p class="lede">Left lane: what was written. Right lane: who enforced it. A line between two cards means the ruler or council on the right used the text on the left, and the card says how.</p>
+  <p class="xlink">
+    <a href="https://claude.ai/code/artifact/71ef5a5f-a92e-4a42-90f0-755766ccc776" target="_blank" rel="noopener">About &rarr;</a>
+    <a href="../object-record-timeline/" target="_blank" rel="noopener">Object Record Timeline &rarr;</a>
+    <a href="../israel-gaza-focus/" target="_blank" rel="noopener">Israel and Gaza in Focus &rarr;</a>
+    <a href="../reprisal-line/" target="_blank" rel="noopener">The Reprisal Line &rarr;</a>
+    <a href="../references/" target="_blank" rel="noopener">References &rarr;</a>
+  </p>
+  <p class="legend">
+    <span><i class="sw doc"></i>Written</span>
+    <span><i class="sw power"></i>Enforced</span>
+    <span><i class="sw retract"></i>Withdrawn</span>
+    <span><i class="picmark"></i>photograph included</span>
+    <span><i class="sw grade"></i>Grade A: physical object survives. B: text survives by copy or quotation. X: the claim itself, no outside witness.</span>
+  </p>
+</header>
+<details class="howto" id="howto">
+  <summary>How to use this</summary>
+  <div class="hbody">
+  <dl>
+    <dt>The lanes</dt><dd>Texts that assert the charge run down the left. Rulers and councils that enforced it run down the right. The two withdrawals sit across both lanes at the bottom.</dd>
+    <dt>The lines</dt><dd>A dashed line joins a text to an enforcement that used it. Tap either card: the line darkens and a note says how.</dd>
+    <dt>Open a card</dt><dd>Tap it to read the evidence, the grade, and the source. One card opens at a time.</dd>
+    <dt>The photo mark</dt><dd>The small frame by a title means the open card shows a photograph. Tap the photograph to see it full size.</dd>
+    <dt>Learned</dt><dd>The button inside an open card marks it learned. The bar in the strip counts how many you have marked.</dd>
+    <dt>Filters</dt><dd>The dropdowns narrow the list. The i on each says what it covers.</dd>
+    <dt>Jump to era</dt><dd>Scrolls to the first card of that stretch of the run.</dd>
+  </dl>
+  </div>
+</details>
+</div>
+
+<nav class="filternav" id="filternav">
+  <div class="wrap" style="position:relative">
+  <p class="filternote"><b>Filters</b> narrows search by era, actor, grade, or photo.</p>
+  <div class="filterbar">
+    <button type="button" class="ftoggle" id="ftoggle" aria-expanded="false" aria-controls="filterPanel">Filters<span class="n" id="factive" hidden>0</span><span class="car">&#9662;</span></button>
+    <input type="search" id="f-q" placeholder="Search text, place, or source">
+    <p class="count" id="count"></p>
+    <label class="jump">Jump to era: <select id="jump"><option value="">Choose</option></select></label>
+    <span class="progress"><span class="bar"><i id="pbar"></i></span><span id="pcount"></span></span>
+  </div>
+  <div class="filters" id="filterPanel" hidden>
+    <div class="fcell"><span class="flabel">Era <span class="fi" tabindex="0" role="button" aria-label="About the era filter">i<span class="fitip">The six stretches the run is grouped into, by date.</span></span></span>
+      <select id="f-era"><option value="">All eras</option></select></div>
+    <div class="fcell"><span class="flabel">Lane <span class="fi" tabindex="0" role="button" aria-label="About the lane filter">i<span class="fitip">Which lane the card sits in: a text that asserts the charge, an act that enforced it, or a withdrawal.</span></span></span>
+      <select id="f-lane"><option value="">All lanes</option><option value="doc">Written</option><option value="power">Enforced</option><option value="retract">Withdrawn</option></select></div>
+    <div class="fcell"><span class="flabel">Evidence grade <span class="fi" tabindex="0" role="button" aria-label="About the grade filter">i<span class="fitip">How strong the evidence is: A a physical object survives, B the text survives by copy or quotation, X the claim itself with no outside witness. A card with a split grade matches either letter.</span></span></span>
+      <select id="f-grade"><option value="">All grades</option><option value="A">A</option><option value="B">B</option><option value="X">X</option></select></div>
+    <div class="fcell"><span class="flabel">Photograph <span class="fi" tabindex="0" role="button" aria-label="About the photograph filter">i<span class="fitip">Whether the card shows a photograph of the object, the place, or the person.</span></span></span>
+      <select id="f-pic"><option value="">Photographs and none</option><option value="yes">With a photograph</option><option value="no">No photograph</option></select></div>
+    <div class="fcell"><span class="flabel">Progress <span class="fi" tabindex="0" role="button" aria-label="About the progress filter">i<span class="fitip">Whether you have marked the card as learned.</span></span></span>
+      <select id="f-learned"><option value="">Learned and unlearned</option><option value="no">Not yet learned</option><option value="yes">Learned</option></select></div>
+  </div>
+  </div>
+</nav>
+
+<div class="lanes"><div><b>Written</b>texts that assert the charge</div><div class="r"><b>Enforced</b>law, decree, or force</div></div>
+
+<div id="board">
+  <svg id="links" aria-hidden="true"></svg>
+  <div id="rows"></div>
+  <p class="empty" id="empty" hidden>No card matches. Clear the search or pick another era.</p>
+</div>
+
+<div class="note">
+  <p>Biblical passages are dated by the historical-critical consensus, the same way the Object Record dates every other document: when it was composed, what physical copy survives, and what outside witness exists for the event it describes. The crowd scene at the trial has none, so it is graded X. The text's existence by the mid-2nd century is graded A, because a fragment of John sits in a case in Manchester.</p>
+  <p>Tap any card to read the evidence, the grade, and the source. Tap a card with a line attached to bring the line forward.</p>
+</div>
+
+<p class="foot">Part of the Object Record: the same evidence standard, applied to how the Christ-killer charge itself was written and enforced. Photographs load from Wikimedia Commons; each credit line names the file and, where the picture is a stand-in for the object, says so. Progress is saved in this browser only. &nbsp; <a href="../references/" target="_blank" rel="noopener">References</a></p>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true"><button class="lbx" aria-label="Close image">&times;</button><img id="lightboxImg" src="" alt=""></div>
+
+<script>
+const DATA = [
+ {id:"m", img:"images/202.jpg", cr:"Page ix of W. G. Waddell's edition of Manetho, London, 1940. A modern edition: the Aegyptiaca survives only in later quotations. Wikimedia Commons, public domain.", era:1, lane:"doc", y:"c. 270 BCE", t:"Manetho, Aegyptiaca", who:"Egyptian priest, Alexandria", what:"Writes that the Jews were lepers expelled from Egypt. The first surviving hostile origin story.",
+  ev:"Lost. Survives only where Josephus quotes it in Against Apion 1.26-31 (c. 95 CE).", g:"B", src:"Peter Schäfer, Judeophobia: Attitudes toward the Jews in the Ancient World (Harvard University Press, 1997), ch. 1."},
+ {id:"alex", img:"images/108.jpg", cr:"Philo of Alexandria, engraving by André Thevet, 1584. An imagined portrait of the witness who wrote In Flaccum, not the riots. Wikimedia Commons, public domain.", era:1, lane:"power", y:"38 CE", t:"Alexandria riots", who:"Aulus Avillius Flaccus, Roman prefect of Egypt", what:"Lets mobs burn synagogues and pen Jews into one quarter of the city. Rome's first recorded anti-Jewish violence.",
+  ev:"Philo, In Flaccum, written by an eyewitness within 3 years. Claudius's letter to the Alexandrians, 41 CE, on papyrus (P.Lond. 1912, British Library).", g:"A", src:"Schäfer, Judeophobia, ch. 8; Erich Gruen, Diaspora: Jews amidst Greeks and Romans (Harvard University Press, 2002)."},
+ {id:"titus", img:"images/203.jpg", cr:"Spoils of Jerusalem relief, Arch of Titus, Rome. Photo Paolo Villa, Wikimedia Commons, CC BY-SA 4.0.", era:1, lane:"power", y:"70 CE", t:"Temple destroyed, Jewish tax imposed", who:"Titus, then Vespasian", what:"Rome burns the Temple, then converts the Temple half-shekel into the Fiscus Judaicus, paid to Jupiter Capitolinus by every Jew in the empire.",
+  ev:"Arch of Titus relief, Rome. Tax receipts on ostraca from Edfu, Egypt, 71-116 CE. Josephus, Jewish War 6-7.", g:"A", src:"Martin Goodman, Rome and Jerusalem: The Clash of Ancient Civilizations (Allen Lane, 2007), ch. 12."},
+
+ {id:"mark", img:"images/204.jpg", cr:"Papyrus 45 (P. Chester Beatty I), the leaf with Mark 8:35-9:1, Chester Beatty Library, Dublin. Wikimedia Commons. The codex does not preserve Mark 15.", era:2, lane:"doc", y:"c. 70 CE", t:"Gospel of Mark, ch. 15", who:"Anonymous Greek-speaking Christian", what:"Pilate hesitates; the crowd demands the cross. The execution moves from the Roman governor onto the Jewish crowd.",
+  ev:"Event claimed (crowd scene, c. 30 CE): no outside witness. Tacitus (Annals 15.44) and Josephus (Antiquities 18.3) confirm only the execution under Pilate. Text composed c. 70: dated by Mark 13 describing the Temple's fall. Earliest copy: Papyrus 45, c. 250 CE, Chester Beatty Library, Dublin.", g:"B for the text, X for the scene", src:"Bart Ehrman, The New Testament: A Historical Introduction (Oxford University Press, 7th ed. 2020), ch. 6; Paula Fredriksen, Jesus of Nazareth, King of the Jews (Knopf, 1999)."},
+ {id:"matt", img:"images/205.jpg", cr:"Codex Sinaiticus, opening of Matthew, 4th century, British Library. Wikimedia Commons. The leaf shown is Matthew 1, not 27:25.", era:2, lane:"doc", y:"c. 85 CE", t:"Gospel of Matthew, 27:25", who:"Anonymous, probably Antioch", what:"Adds the line the crowd speaks: his blood is on us and on our children. The sentence later used to make guilt hereditary.",
+  ev:"Event claimed: no outside witness. Text composed c. 80-90, after Mark. Earliest copies: papyrus fragments of the late 2nd century (P64, P104); first complete text Codex Sinaiticus, 4th century, British Library.", g:"B for the text, X for the scene", src:"Ehrman, The New Testament, ch. 7; Raymond Brown, The Death of the Messiah (Doubleday, 1994), vol. 1, pp. 831-839."},
+ {id:"john", img:"images/206.jpg", cr:"Papyrus 52, John 18, John Rylands Library, Manchester. Photo Raxom, Wikimedia Commons, CC BY-SA 3.0.", era:2, lane:"doc", y:"c. 95 CE", t:"Gospel of John", who:"Anonymous, Johannine community", what:"Replaces 'the priests' with 'the Jews' about 70 times. The whole people, not a council, becomes the opponent of Jesus.",
+  ev:"Event claimed: no outside witness. Text composed c. 90-110. Earliest copy: Papyrus 52, a fragment of John 18, c. 125-175 CE, John Rylands Library, Manchester. The oldest physical piece of any gospel.", g:"A for existence by mid-2nd century, X for the scene", src:"Ehrman, The New Testament, ch. 10; Fredriksen, Jesus of Nazareth, ch. 1."},
+ {id:"hadrian", img:"images/207.jpg", cr:"Coin of Aelia Capitolina under Hadrian, Münzkabinett, Staatliche Museen zu Berlin. Wikimedia Commons.", era:2, lane:"power", y:"135 CE", t:"Jerusalem becomes Aelia Capitolina", who:"Emperor Hadrian", what:"Crushes the Bar Kokhba revolt, bans Jews from Jerusalem, builds a temple of Jupiter on the site. Christians can now say Israel was punished.",
+  ev:"Aelia Capitolina coins struck under Hadrian. Cassius Dio, Roman History 69.12-14. Eusebius, Church History 4.6.", g:"A", src:"Peter Schäfer, ed., The Bar Kokhba War Reconsidered (Mohr Siebeck, 2003)."},
+ {id:"justin", img:"images/208.jpg", cr:"Justin Martyr, engraved portrait from André Thevet, Les vrais pourtraits, 1584. A 16th-century imagining, not a likeness; the Dialogue's one manuscript is not on Commons. Wikimedia Commons.", era:2, lane:"doc", y:"c. 160 CE", t:"Justin Martyr, Dialogue with Trypho", who:"Christian philosopher, Rome", what:"Argues the church is the true Israel and the Jews' scriptures now belong to Christians. The replacement idea in writing.",
+  ev:"Survives in one manuscript, Parisinus graecus 450, copied 1363, Bibliothèque nationale de France.", g:"B", src:"Judith Lieu, Image and Reality: The Jews in the World of the Christians in the Second Century (T&T Clark, 1996)."},
+ {id:"melito", img:"images/118.jpg", cr:"The synagogue at Sardis, the city where Melito preached. The Peri Pascha papyri are not on Commons; this is the place, not the text. Photo Carole Raddato, Wikimedia Commons, CC BY-SA 2.0.", era:2, lane:"doc", y:"c. 165 CE", t:"Melito of Sardis, Peri Pascha", who:"Bishop of Sardis, Asia Minor", what:"Easter sermon: 'God has been murdered' by Israel. The first surviving deicide charge in writing.",
+  ev:"Lost for 1,700 years. Recovered on two 4th-century papyri: Chester Beatty XII (Dublin) and Bodmer XIII (Geneva). First published by Campbell Bonner, 1940.", g:"A", src:"Stuart G. Hall, ed., Melito of Sardis: On Pascha and Fragments (Oxford University Press, 1979); Rosemary Ruether, Faith and Fratricide (Seabury, 1974), ch. 3."},
+
+ {id:"const", img:"images/209.jpg", cr:"Colossal marble head of Constantine, Capitoline Museums, Rome. No manuscript of the letter survives; this is the man, not the document. Wikimedia Commons.", era:3, lane:"power", y:"325 CE", t:"Constantine's letter after Nicaea", who:"Emperor Constantine", what:"Orders every church to date Easter without the Jewish calendar, so Christians share nothing with a people he calls detestable. The charge enters imperial policy.",
+  ev:"Text preserved by Eusebius, Life of Constantine 3.18-19, written within 15 years. No original copy.", g:"B", src:"Averil Cameron and Stuart Hall, trans., Eusebius: Life of Constantine (Oxford University Press, 1999); James Carroll, Constantine's Sword (Houghton Mifflin, 2001), part 3."},
+ {id:"thess", img:"images/210.jpg", cr:"Title page of the Codex Theodosianus in Jacques Godefroy's printed edition, Leipzig 1736-1743, a printed book rather than a manuscript leaf. Wikimedia Commons.", era:3, lane:"power", y:"380 CE", t:"Edict of Thessalonica", who:"Emperor Theodosius I", what:"Makes Nicene Christianity the only lawful religion of the empire. Every other belief is now a legal category.",
+  ev:"Codex Theodosianus 16.1.2. Manuscripts from the 6th century onward.", g:"A", src:"Amnon Linder, The Jews in Roman Imperial Legislation (Wayne State University Press, 1987)."},
+ {id:"chrys", img:"images/211.jpg", cr:"John Chrysostom, 10th-century mosaic, north tympanum, Hagia Sophia, Istanbul. Wikimedia Commons.", era:3, lane:"doc", y:"386-387 CE", t:"John Chrysostom, eight sermons against the Jews", who:"Priest, later archbishop, Antioch", what:"Calls synagogues brothels and Jews the killers of Christ, preached to Christians who were attending synagogue festivals.",
+  ev:"Full Greek text in a wide manuscript tradition; Migne, Patrologia Graeca 48.", g:"A", src:"Robert Wilken, John Chrysostom and the Jews: Rhetoric and Reality in the Late 4th Century (University of California Press, 1983)."},
+ {id:"aug", img:"images/212.jpg", cr:"Leaf from a 1470 manuscript of Augustine, New York Public Library, Spencer Collection MS 30; the file's own description says the page shown carries his Retractions, bound with City of God. Wikimedia Commons.", era:3, lane:"doc", y:"c. 425 CE", t:"Augustine, City of God 18.46", who:"Bishop of Hippo", what:"Jews must survive, scattered and subject, as living witnesses to Christian truth. The doctrine that kept them alive and kept them down for 1,000 years.",
+  ev:"City of God survives in hundreds of manuscripts from the 5th century onward.", g:"A", src:"Paula Fredriksen, Augustine and the Jews (Doubleday, 2008)."},
+ {id:"code", img:"images/210.jpg", cr:"Title page of the Codex Theodosianus in Jacques Godefroy's printed edition, Leipzig 1736-1743, a printed book rather than a manuscript leaf. Wikimedia Commons.", era:3, lane:"power", y:"418-438 CE", t:"Theodosian Code, book 16 title 8", who:"Emperors Honorius, Theodosius II", what:"Bars Jews from imperial service (418) and from building new synagogues (423). The whole set is codified in 438 and stays in force under Justinian.",
+  ev:"Codex Theodosianus 16.8.24 and 16.8.25; Codex Justinianus 1.9.", g:"A", src:"Linder, The Jews in Roman Imperial Legislation, nos. 45-54."},
+
+ {id:"rhine", img:"images/213.jpg", cr:"Heiliger Sand, the medieval Jewish cemetery at Worms. Photo Gerd Eichmann, Wikimedia Commons, CC BY-SA 3.0.", era:4, lane:"power", y:"1096", t:"Rhineland massacres", who:"Crusader bands under Count Emicho; town mobs", what:"Speyer, Worms, Mainz, Cologne. Crusaders kill Jews on the way east, some saying they will avenge Christ on his killers before fighting Muslims.",
+  ev:"Three Hebrew chronicles (Solomon bar Simson and others) and Latin chronicles (Albert of Aachen) agree on the towns and the sequence.", g:"A", src:"Robert Chazan, European Jewry and the First Crusade (University of California Press, 1987)."},
+ {id:"norwich", img:"images/214.jpg", cr:"William of Norwich, 15th-century rood screen panel, Holy Trinity, Loddon, Norfolk. The cult image made from Thomas's book; the manuscript itself is not on Commons. Photo Simon Knott, Wikimedia Commons.", era:4, lane:"doc", y:"c. 1150", t:"Thomas of Monmouth, Life and Passion of William of Norwich", who:"Monk, Norwich Cathedral Priory", what:"Claims Jews killed a boy in mock crucifixion at Easter 1144. The first blood libel, invented to make a saint's shrine.",
+  ev:"One manuscript, Cambridge University Library Add. 3037, 12th century.", g:"A", src:"E. M. Rose, The Murder of William of Norwich: The Origins of the Blood Libel in Medieval Europe (Oxford University Press, 2015)."},
+ {id:"lateran", img:"images/215.jpg", cr:"The Fourth Lateran Council as drawn by Matthew Paris, Chronica Maiora, about 1250. Wikimedia Commons.", era:4, lane:"power", y:"1215", t:"Fourth Lateran Council, canon 68", who:"Pope Innocent III and the assembled bishops", what:"Orders Jews and Muslims to wear distinguishing dress. Jews become visible by law across Latin Christendom.",
+  ev:"Conciliar decrees, standard critical text.", g:"A", src:"Norman Tanner, ed., Decrees of the Ecumenical Councils (Georgetown University Press, 1990), vol. 1."},
+ {id:"england", img:"images/143.jpg", cr:"The expulsion of the Jews, marginal drawing in the Rochester Chronicle, British Library, Cotton MS Nero D II, f. 183v. Wikimedia Commons.", era:4, lane:"power", y:"1290", t:"Expulsion from England", who:"King Edward I", what:"Writ of 18 July 1290 orders every Jew out by All Saints' Day. About 2,000 people. The first national expulsion.",
+  ev:"Writs enrolled in the Close Rolls, The National Archives, Kew.", g:"A", src:"Robin Mundill, England's Jewish Solution: Experiment and Expulsion, 1262-1290 (Cambridge University Press, 1998)."},
+ {id:"plague", img:"images/216.jpg", cr:"Jews, marked by the badge, burned at the stake: a page from the Luzerner Schilling chronicle (Lucerne, 1513), which shows a later burning than 1349. Burgerbibliothek Lucerne, via Wikimedia Commons.", era:4, lane:"power", y:"1348-1349", t:"Black Death massacres", who:"Town councils and mobs, Rhine and Swiss towns", what:"Jews accused of poisoning wells. Strasbourg burns its Jews on 14 February 1349, before the plague reached the city.",
+  ev:"Town chronicles; confessions under torture recorded at Chillon; Clement VI's bull of 6 July 1348 condemning the charge.", g:"A", src:"Samuel K. Cohn, 'The Black Death and the Burning of Jews', Past & Present 196 (2007), pp. 3-36."},
+
+ {id:"toledo", era:5, lane:"power", y:"1449", t:"Toledo, Sentencia-Estatuto", who:"Pero Sarmiento and the Toledo city council", what:"Bars anyone of Jewish descent from public office, even if baptized. Guilt now passes by blood. Conversion stops working.",
+  ev:"Statute text survives in 15th-century copies; confirmed by later purity statutes across Castile.", g:"A", src:"David Nirenberg, Anti-Judaism: The Western Tradition (W. W. Norton, 2013), ch. 6; Albert Sicroff, Los estatutos de limpieza de sangre (Taurus, 1985)."},
+ {id:"alhambra", img:"images/217.jpg", cr:"A copy of the Alhambra Decree of 31 March 1492. Wikimedia Commons.", era:5, lane:"power", y:"1492", t:"Alhambra Decree", who:"Ferdinand and Isabella", what:"Every Jew must convert or leave Spain within 4 months. Somewhere between 40,000 and 100,000 leave.",
+  ev:"Original decree, 31 March 1492, Archivo General de Simancas.", g:"A", src:"Henry Kamen, 'The Mediterranean and the Expulsion of Spanish Jews in 1492', Past & Present 119 (1988)."},
+ {id:"luther", img:"images/218.jpg", cr:"Page from Martin Luther, Von den Jüden und iren Lügen, Wittenberg 1543. Wikimedia Commons.", era:5, lane:"doc", y:"1543", t:"Martin Luther, On the Jews and Their Lies", who:"Reformer, Wittenberg", what:"Calls for synagogues to be burned, homes destroyed, and rabbis forbidden to teach. Reprinted by the Nazis in 1935.",
+  ev:"Printed by Hans Lufft, Wittenberg, 1543; copies in the Herzog August Bibliothek and elsewhere.", g:"A", src:"Luther's Works, vol. 47 (Fortress Press, 1971); Thomas Kaufmann, Luther's Jews (Oxford University Press, 2017)."},
+ {id:"ghetto", img:"images/154.jpg", cr:"Cum nimis absurdum, papal bull of 14 July 1555. Wikimedia Commons.", era:5, lane:"power", y:"1555", t:"Cum nimis absurdum, the Roman ghetto", who:"Pope Paul IV", what:"Walls Rome's Jews into one quarter, locked at night, and limits them to rag trades. Augustine's 'subject witness' turned into a street plan.",
+  ev:"Papal bull of 14 July 1555; ghetto walls stood until 1888.", g:"A", src:"Kenneth Stow, Catholic Thought and Papal Jewry Policy, 1555-1593 (Jewish Theological Seminary, 1977)."},
+ {id:"marr", img:"images/219.jpg", cr:"Wilhelm Marr, portrait photograph, reproduced from Vierhundert Jahre Juden in Hamburg (1991). Wikimedia Commons.", era:5, lane:"doc", y:"1879", t:"Wilhelm Marr coins 'Antisemitismus'", who:"Journalist, Hamburg", what:"Renames Jew-hatred as opposition to a race, so it can be argued without mentioning religion.",
+  ev:"Der Sieg des Judenthums über das Germanenthum, 12 editions in 1879; Antisemiten-Liga founded the same year.", g:"A", src:"Moshe Zimmermann, Wilhelm Marr: The Patriarch of Antisemitism (Oxford University Press, 1986)."},
+ {id:"protocols", img:"images/220.jpg", cr:"Cover of the 1912 Nilus edition of the Protocols. Wikimedia Commons.", era:5, lane:"doc", y:"1903", t:"The Protocols of the Elders of Zion", who:"Unknown author; first printed in Znamya, St Petersburg", what:"A forged minutes of a Jewish plan to rule the world. Copied largely from an 1864 French satire of Napoleon III.",
+  ev:"Exposed as plagiarism by Philip Graves in The Times (London), 16-18 August 1921. Ruled a forgery by a Bern court in 1935.", g:"A", src:"Norman Cohn, Warrant for Genocide (Harper & Row, 1967)."},
+ {id:"nurem", img:"images/221.jpg", cr:"Reichsbürgergesetz, Reichsgesetzblatt I 1935, p. 1146. Wikimedia Commons.", era:5, lane:"power", y:"1935", t:"Nuremberg Laws", who:"German Reichstag, Nazi government", what:"Defines a Jew by grandparents, strips citizenship, bans marriage. The Toledo idea written into a modern statute.",
+  ev:"Reichsgesetzblatt I, 15 September 1935, pp. 1146-1147.", g:"A", src:"Saul Friedländer, Nazi Germany and the Jews, vol. 1 (HarperCollins, 1997), ch. 5."},
+
+ {id:"nostra", img:"images/054.jpg", cr:"The Second Vatican Council in session, St Peter's Basilica. Photo Lothar Wolleh, Wikimedia Commons, CC BY-SA 3.0.", era:6, lane:"retract", y:"1965", t:"Nostra Aetate, section 4", who:"Second Vatican Council, Pope Paul VI", what:"States that the death of Christ cannot be charged against all Jews then living, nor against Jews today. The collective-guilt charge withdrawn after 1,800 years.",
+  ev:"Acta Apostolicae Sedis 58 (1966), pp. 740-744.", g:"A", src:"John Connelly, From Enemy to Brother: The Revolution in Catholic Teaching on the Jews, 1933-1965 (Harvard University Press, 2012)."},
+ {id:"elca", era:6, lane:"retract", y:"1994", t:"ELCA declaration to the Jewish community", who:"Evangelical Lutheran Church in America", what:"Repudiates Luther's 1543 writings and the use made of them.",
+  ev:"Declaration adopted by the ELCA Church Council, 18 April 1994.", g:"A", src:"Kaufmann, Luther's Jews, epilogue."}
+];
+
+const LINKS = [
+ {from:"matt", to:"melito", note:"Melito preaches the gospel trial scene as history"},
+ {from:"melito", to:"const", note:"same charge, now imperial policy"},
+ {from:"chrys", to:"code", note:"sermon and statute in Antioch's lifetime"},
+ {from:"matt", to:"rhine", note:"chroniclers record crusaders citing the killing of Christ"},
+ {from:"aug", to:"ghetto", note:"papal policy applies the subject-witness doctrine"},
+ {from:"norwich", to:"england", note:"blood libel spreads across England before the expulsion"},
+ {from:"marr", to:"nurem", note:"race replaces religion in the definition"},
+ {from:"luther", to:"nurem", note:"reprinted and cited under the same regime"},
+ {from:"melito", to:"nostra", note:"withdrawn"}
+];
+
+const ERAS = {1:"Before the church", 2:"The charge is written", 3:"The empire adopts it", 4:"Medieval enforcement", 5:"Blood replaces belief", 6:"Withdrawal"};
+const LS_KEY = 'chargeline.learned';
+
+const rows = document.getElementById('rows');
+const svg = document.getElementById('links');
+const board = document.getElementById('board');
+const countEl = document.getElementById('count');
+const emptyEl = document.getElementById('empty');
+const searchEl = document.getElementById('f-q');
+const eraSel = document.getElementById('f-era');
+const laneSel = document.getElementById('f-lane');
+const gradeSel = document.getElementById('f-grade');
+const learnedSel = document.getElementById('f-learned');
+const picSel = document.getElementById('f-pic');
+const lightbox = document.getElementById('lightbox');
+function openLightbox(src){ document.getElementById('lightboxImg').src=src; lightbox.classList.add('on'); }
+lightbox.addEventListener('click',()=>{ lightbox.classList.remove('on'); document.getElementById('lightboxImg').src=''; });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') lightbox.classList.remove('on'); });
+const jumpSel = document.getElementById('jump');
+const ftoggle = document.getElementById('ftoggle');
+const panel = document.getElementById('filterPanel');
+const factive = document.getElementById('factive');
+
+let learned = new Set();
+try{ learned = new Set(JSON.parse(localStorage.getItem(LS_KEY)||'[]')); }catch(e){}
+function saveLearned(){ try{ localStorage.setItem(LS_KEY, JSON.stringify([...learned])); }catch(e){} }
+
+Object.keys(ERAS).forEach(k=>{
+  eraSel.insertAdjacentHTML('beforeend', `<option value="${k}">${ERAS[k]}</option>`);
+  jumpSel.insertAdjacentHTML('beforeend', `<option value="${k}">${ERAS[k]}</option>`);
+});
+
+function render(){
+  rows.innerHTML='';
+  DATA.forEach((d,i)=>{
+    const row=document.createElement('div'); row.className='row'; row.dataset.era=d.era; row.dataset.i=i;
+    const c=document.createElement('div'); c.className='card '+d.lane; c.id='c-'+d.id; c.tabIndex=0;
+    const pic=d.img?`<img class="ph" src="${d.img}" alt="" loading="lazy"><p class="cr">${d.cr}</p>`:'';
+    c.innerHTML=`<span class="learnmark" hidden>&#10003; Learned</span><div class="yr">${d.y}</div><div class="ttl">${d.t}${d.img?'<span class="picmark" title="Photograph included"></span>':''}</div><div class="who">${d.who}</div><p class="what">${d.what}</p>
+      <div class="more">${pic}<p><span class="k">Evidence</span>${d.ev}</p><p><span class="k">Grade</span><span class="grade">${d.g}</span></p><p><span class="k">Source</span>${d.src}</p>
+      <div class="acts"><button type="button" class="learn" data-id="${d.id}">Mark as learned</button></div></div>`;
+    c.addEventListener('click',e=>{ if(e.target.classList.contains('ph')){e.stopPropagation();openLightbox(e.target.src);return;} toggle(c); });
+    c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){if(e.target.tagName==='BUTTON')return;e.preventDefault();toggle(c);}});
+    c.querySelector('.learn').addEventListener('click',e=>{e.stopPropagation();setLearned(d.id,!learned.has(d.id));});
+    row.appendChild(c); rows.appendChild(row);
+  });
+  paintLearned();
+  applyFilters();
+}
+function paintLearned(){
+  DATA.forEach(d=>{
+    const c=document.getElementById('c-'+d.id); if(!c) return;
+    const on=learned.has(d.id);
+    c.querySelector('.learnmark').hidden=!on;
+    const b=c.querySelector('.learn'); b.textContent=on?'Learned ✓':'Mark as learned'; b.classList.toggle('done',on);
+  });
+  const n=learned.size, t=DATA.length;
+  document.getElementById('pbar').style.width=(t?Math.round(n/t*100):0)+'%';
+  document.getElementById('pcount').textContent=n+' / '+t+' learned';
+}
+function setLearned(id,on){
+  if(on) learned.add(id); else learned.delete(id);
+  saveLearned(); paintLearned();
+  if(learnedSel.value) applyFilters(); else draw();
+}
+function toggle(c){
+  const was=c.classList.contains('open');
+  document.querySelectorAll('.card.open').forEach(o=>o.classList.remove('open'));
+  if(!was) c.classList.add('open');
+  document.querySelectorAll('#links path').forEach(p=>p.classList.toggle('on', p.dataset.from===c.id||p.dataset.to===c.id));
+  draw();
+}
+function applyFilters(){
+  const needle=searchEl.value.trim().toLowerCase();
+  const era=eraSel.value, lane=laneSel.value, grade=gradeSel.value, lrn=learnedSel.value, pic=picSel.value;
+  let shown=0;
+  rows.querySelectorAll('.row').forEach(r=>{
+    const d=DATA[Number(r.dataset.i)];
+    let ok = !era || String(d.era)===era;
+    if(ok && lane) ok = d.lane===lane;
+    if(ok && grade) ok = new RegExp('(^|[^A-Za-z])'+grade+'([^A-Za-z]|$)').test(d.g);
+    if(ok && pic) ok = (pic==='yes')===Boolean(d.img);
+    if(ok && lrn) ok = (lrn==='yes')===learned.has(d.id);
+    if(ok && needle) ok = [d.y,d.t,d.who,d.what,d.ev,d.src,d.g].join(' ').toLowerCase().includes(needle);
+    r.classList.toggle('hidden', !ok);
+    if(ok) shown++;
+  });
+  countEl.textContent = shown+' of '+DATA.length+' cards';
+  emptyEl.hidden = shown>0;
+  const active=[era,lane,grade,pic,lrn].filter(Boolean).length;
+  factive.textContent=active; factive.hidden=active===0;
+  draw();
+}
+ftoggle.addEventListener('click',()=>{
+  const open=panel.hidden; panel.hidden=!open;
+  ftoggle.setAttribute('aria-expanded', open?'true':'false'); ftoggle.classList.toggle('on',open);
+});
+document.addEventListener('click',e=>{
+  if(!panel.hidden && window.innerWidth>560 && !e.target.closest('#filterPanel') && !e.target.closest('#ftoggle')){
+    panel.hidden=true; ftoggle.setAttribute('aria-expanded','false'); ftoggle.classList.remove('on');
+  }
+});
+document.querySelectorAll('.fi').forEach(fi=>fi.addEventListener('click',e=>{e.stopPropagation();fi.classList.toggle('on');}));
+[eraSel,laneSel,gradeSel,picSel,learnedSel].forEach(s=>s.addEventListener('change',applyFilters));
+searchEl.addEventListener('input',applyFilters);
+jumpSel.addEventListener('change',()=>{
+  const k=jumpSel.value; if(!k) return;
+  const target=[...rows.querySelectorAll('.row')].find(r=>r.dataset.era===k && !r.classList.contains('hidden'));
+  if(!target) return;
+  const nav=document.getElementById('filternav');
+  const navH=(getComputedStyle(nav).position==='sticky')?nav.offsetHeight:0;
+  const y=target.getBoundingClientRect().top+window.pageYOffset-navH-8;
+  window.scrollTo({top:y,behavior:'smooth'});
+  jumpSel.value='';
+});
+function draw(){
+  const b=board.getBoundingClientRect();
+  svg.setAttribute('width',b.width); svg.setAttribute('height',rows.offsetHeight);
+  svg.innerHTML='';
+  LINKS.forEach(l=>{
+    const a=document.getElementById('c-'+l.from), z=document.getElementById('c-'+l.to);
+    if(!a||!z||a.closest('.row').classList.contains('hidden')||z.closest('.row').classList.contains('hidden')) return;
+    const ra=a.getBoundingClientRect(), rz=z.getBoundingClientRect();
+    const aDoc=a.classList.contains('doc'), zPow=z.classList.contains('power');
+    const x1=(aDoc?ra.right:ra.left)-b.left, y1=ra.top-b.top+ra.height/2;
+    const x2=(zPow?rz.left:(z.classList.contains('retract')?rz.left+rz.width/2:rz.right))-b.left, y2=(z.classList.contains('retract')?rz.top-b.top:rz.top-b.top+rz.height/2);
+    const mx=b.width/2, cy=(y1+y2)/2;
+    const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+    p.setAttribute('d',`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+    p.dataset.from='c-'+l.from; p.dataset.to='c-'+l.to;
+    const on=a.classList.contains('open')||z.classList.contains('open'); if(on)p.classList.add('on');
+    svg.appendChild(p);
+    if(on){
+      const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+      t.setAttribute('x',mx+6); t.setAttribute('y',cy-4); t.setAttribute('text-anchor','start');
+      t.textContent=l.note; svg.appendChild(t);
+      const bg=document.createElementNS('http://www.w3.org/2000/svg','rect');
+      const w=l.note.length*5.8+8; bg.setAttribute('x',mx+2); bg.setAttribute('y',cy-16); bg.setAttribute('width',w); bg.setAttribute('height',16); bg.setAttribute('fill','var(--paper)');
+      svg.insertBefore(bg,t);
+    }
+  });
+}
+// how-to box: open and floated beside the column when the window is wide enough, otherwise one closed line
+const howto=document.getElementById('howto');
+let wide=null;
+function setHowto(){
+  const w=window.innerWidth>=1560;
+  if(w!==wide){ howto.open=w; wide=w; }
+}
+setHowto();
+window.addEventListener('resize',()=>{setHowto();draw();});
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(draw);}
+render();
+</script>
+
+</body></html>
