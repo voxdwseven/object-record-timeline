@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>About the Object Record</title>
+<title>Timelines, by David Erin Wilson</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
@@ -31,92 +31,127 @@
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 var(--body)}
 a{color:var(--accent)}
-h1,h2{font-family:var(--display);text-wrap:balance;margin:0}
-.wrap{max-width:680px;margin:0 auto;padding:0 20px 90px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px 90px}
 .eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.09em;font-size:12px;color:var(--mute);margin:34px 0 0}
 h1{font-size:clamp(28px,4vw,34px);line-height:1.14;margin:6px 0 6px;font-weight:700;letter-spacing:-0.01em}
 .sub{font-size:17px;color:var(--mute);margin:0 0 4px}
-h2{font-size:22px;font-weight:700;margin:34px 0 4px;line-height:1.2}
+h2{font-size:24px;font-weight:700;margin:0 0 4px;line-height:1.2}
+h3{font-size:19px;font-weight:700;margin:26px 0 4px;line-height:1.25}
 p{margin:12px 0}
 .lede{font-size:17.5px;line-height:1.55}
 .label{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.07em;font-size:11.5px;color:var(--mute);font-weight:600}
 a.btn{display:inline-block;text-decoration:none;background:var(--card);color:var(--ink);border:1px solid var(--line-2);border-radius:var(--r);padding:8px 14px;font-size:14px;font-weight:600;margin:0 8px 8px 0;box-shadow:var(--shadow);transition:background .12s}
 a.btn:hover{background:var(--line)}
 a.btn:focus-visible{outline:2px solid var(--lapis);outline-offset:2px}
-.links{margin:18px 0 6px}
+a.btn.primary{background:var(--lapis);color:#FBFAF6;border-color:var(--lapis)}
+a.btn.primary:hover{background:#243c70}
+.links{margin:14px 0 6px;display:flex;flex-wrap:wrap;gap:0}
 .standard{border:1px solid var(--line);border-radius:var(--r);background:var(--card);box-shadow:var(--shadow);padding:16px 18px;margin:22px 0}
 .grades{display:flex;flex-wrap:wrap;gap:14px 20px;margin:12px 0 0}
 .grades div{font-size:14px;color:var(--ink)}
 .grade{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:4px;font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;margin-right:6px;vertical-align:middle}
 .gA{background:var(--lapis)}.gB{background:var(--slate)}.gC{background:var(--sand)}.gX{background:var(--rust)}
-.applist{list-style:none;padding:0;margin:12px 0 0}
-.applist li{padding:10px 0;border-top:1px solid var(--line)}
-.applist li:first-child{border-top:none}
-.applist b{font-weight:600}
 .foot{margin-top:34px;border-top:1px solid var(--line);padding-top:14px;color:var(--mute);font-size:14px}
-.byline{margin-top:10px;font-size:14px;color:var(--mute)}
+.fam{border:1px solid var(--line);border-radius:10px;background:var(--card);box-shadow:var(--shadow);padding:22px 22px 18px;margin:20px 0}
+.fam-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.tier{display:inline-block;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.tier.free{background:rgba(62,107,79,.14);color:var(--moss)}
+:root[data-theme="dark"] .tier.free, @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tier.free{background:rgba(135,187,149,.18);color:var(--moss)}}
+.tier.gated{background:rgba(169,132,63,.16);color:var(--sand)}
+:root[data-theme="dark"] .tier.gated, @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tier.gated{background:rgba(211,173,110,.18);color:var(--sand)}}
+.child{margin:16px 0 0 0;padding:14px 16px;border-top:1px solid var(--line)}
+.child:first-of-type{border-top:1px solid var(--line);margin-top:18px}
+.child h3{margin:0 0 4px}
+.gatebox{margin-top:14px;padding:12px 14px;border:1px dashed var(--line-2);border-radius:8px;font-size:14.5px;color:var(--mute)}
+.gatebox a{font-weight:600}
 </style>
 <div class="wrap">
-  <p style="text-align:right;margin:0 0 6px;font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.04em">Last updated: October 4, 2026</p>
+  <p style="text-align:right;margin:0 0 6px;font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.04em">Last updated: October 19, 2026</p>
   <p class="eyebrow">About</p>
-  <h1>The Object Record</h1>
-  <p class="sub">Jewish history told by what survives.</p>
+  <h1>Timelines</h1>
+  <p class="sub">History told by what survives, one sourced record at a time.</p>
 
-  <p class="lede">I built this to tell Jewish history by what survives, and to judge every claim by the evidence behind it. Four tools sit here: the Object Record Timeline, Israel and Gaza in Focus, The Reprisal Line, and The Charge Line. All four run on the same rule. A real object or a dated document counts. Hearsay does not, and scripture read as history does not.</p>
+  <p class="lede">Three timeline families live here, each built on its own evidence rule and graded entry by entry. The AI Timeline is free to open. The Object Record family and Speaking in Unearned Tongues are free to open too, but gated behind a free subscription to Schrödinger's Mood, since that is the publication they run alongside.</p>
 
-  <div class="links">
-    <a class="btn" href="/object-record-timeline/" target="_blank" rel="noopener">Open the Object Record Timeline</a>
-    <a class="btn" href="/israel-gaza-focus/" target="_blank" rel="noopener">Open Israel and Gaza in Focus</a>
-    <a class="btn" href="/reprisal-line/" target="_blank" rel="noopener">Open The Reprisal Line</a>
-    <a class="btn" href="/charge-line/" target="_blank" rel="noopener">Open The Charge Line</a>
-    <a class="btn" href="/roadmap-of-hate/" target="_blank" rel="noopener">Open A Roadmap of Hate</a>
-    <a class="btn" href="/ai-timeline/" target="_blank" rel="noopener">Open the AI Timeline</a>
-    <a class="btn" href="/references/" target="_blank" rel="noopener">References</a>
-  </div>
-
-  <div class="standard">
-    <span class="label">The evidence standard</span>
-    <p style="margin:8px 0 0">Every entry is a thing you could stand in front of: a stele, a coin, a letter, a census return, a photograph. Each carries a grade and names its source. The record opens around 1208 BCE, the first time the name Israel appears on a datable object, and runs to 2026.</p>
-    <div class="grades">
-      <div><span class="grade gA">A</span>contemporary object or document</div>
-      <div><span class="grade gB">B</span>account within a lifetime</div>
-      <div><span class="grade gC">C</span>tradition written later</div>
-      <div><span class="grade gX">X</span>contested by specialists</div>
+  <div class="fam">
+    <div class="fam-head">
+      <h2>The AI Timeline</h2>
+      <span class="tier free">Free, no subscription</span>
+    </div>
+    <p style="margin-top:10px"><span class="label">Why I built it.</span> AI governance arguments keep skipping the history: who decided what, when, and why it mattered. This puts the full run on one page, from the first print-licensing laws to the current AI rulebook fights.</p>
+    <p><span class="label">What it does.</span> A sourced, graded record from 1455 to 2026, each entry tagged by era and by whether it is a word (law, paper, policy) or a practice (a machine, a deployed system), on two spines: technology and governance. A prologue traces print-era precedent (the Stationers' Company, the Licensing Act, the Statute of Anne) before the main run opens in 1943.</p>
+    <div class="links">
+      <a class="btn primary" href="/ai-timeline/" target="_blank" rel="noopener">Open the AI Timeline</a>
     </div>
   </div>
 
-  <h2>The Object Record Timeline</h2>
-  <p><span class="label">Why I built it.</span> I wanted the whole run in order on a single page, so you can see three thousand years at once instead of one fact at a time.</p>
-  <p><span class="label">What it does.</span> It puts all 207 objects on a time spine, grouped into eight eras. Open any entry and it shows what the object is, what happened, who acted, and what it changed, with its grade and source. It remembers what you have read, so you can work through it over weeks.</p>
+  <div class="fam">
+    <div class="fam-head">
+      <h2>The Object Record</h2>
+      <span class="tier gated">Free Substack subscription</span>
+    </div>
+    <p style="margin-top:10px" class="lede">I built this to tell Jewish history by what survives, and to judge every claim by the evidence behind it. Five tools sit here, plus a references page. All run on the same rule: a real object or a dated document counts, hearsay does not, and scripture read as history does not.</p>
 
-  <h2>Israel and Gaza in Focus</h2>
-  <p><span class="label">Why I built it.</span> The full timeline runs three thousand years. Most of what people argue about now is the last two hundred and fifty. This is that stretch on its own.</p>
-  <p><span class="label">What it does.</span> The same evidence standard, narrowed to the events from the 1780s to the war in Gaza today: emancipation and nationalism, the Mandate and the Holocaust, 1948 and the Nakba, the wars, and the record cited on both sides. The objects appear as cards you flip, with a short quiz to check what held.</p>
+    <div class="standard">
+      <span class="label">The evidence standard</span>
+      <div class="grades" style="margin-top:8px">
+        <div><span class="grade gA">A</span>contemporary object or document</div>
+        <div><span class="grade gB">B</span>account within a lifetime</div>
+        <div><span class="grade gC">C</span>tradition written later</div>
+        <div><span class="grade gX">X</span>contested by specialists</div>
+      </div>
+    </div>
 
-  <h2>The Reprisal Line</h2>
-  <p><span class="label">Why I built it.</span> The back-and-forth itself, from the 1947 partition vote to today, kept getting lost inside longer lists of events. This isolates the action-and-reprisal chain on its own.</p>
-  <p><span class="label">What it does.</span> Fifty-eight sourced events on two lanes, Palestinian and Arab-side actions on one, Israeli-side actions on the other, joint and international events spanning both. Curved lines connect an action to the response it is sourced as having triggered. Separate threads mark the West Bank barrier, the 2006 election that brought Hamas to power, and the funding behind both sides.</p>
+    <div class="child">
+      <h3>The Object Record Timeline</h3>
+      <p><span class="label">What it does.</span> All 207 objects on a time spine, grouped into eight eras, opening around 1208 BCE and running to 2026. Open any entry for what the object is, what happened, who acted, and what it changed.</p>
+    </div>
+    <div class="child">
+      <h3>Israel and Gaza in Focus</h3>
+      <p><span class="label">What it does.</span> The same evidence standard, narrowed to the 1780s through the war in Gaza today: emancipation and nationalism, the Mandate and the Holocaust, 1948 and the Nakba, the wars, and the record cited on both sides.</p>
+    </div>
+    <div class="child">
+      <h3>The Reprisal Line</h3>
+      <p><span class="label">What it does.</span> Fifty-eight sourced events on two lanes, Palestinian and Arab-side actions on one, Israeli-side actions on the other. Curved lines connect an action to the response it is sourced as having triggered.</p>
+    </div>
+    <div class="child">
+      <h3>The Charge Line</h3>
+      <p><span class="label">What it does.</span> Two lanes, texts that asserted the Christ-killer charge on one side and the rulers, councils, and statutes that enforced it on the other, from a 3rd-century-BCE Egyptian slander to the Nuremberg Laws.</p>
+    </div>
+    <div class="child">
+      <h3>A Roadmap of Hate</h3>
+      <p><span class="label">What it does.</span> Traces how the same charges and symbols recur across centuries and movements.</p>
+    </div>
 
-  <h2>The Charge Line</h2>
-  <p><span class="label">Why I built it.</span> One hostility in this record outlasts every other: not a single event but eighteen centuries of a single charge, written, then enforced, then finally withdrawn. It deserved its own line, the same way the modern reprisals got one.</p>
-  <p><span class="label">What it does.</span> Two lanes, texts that asserted the Christ-killer charge on one side and the rulers, councils, and statutes that enforced it on the other, from a 3rd-century-BCE Egyptian slander to the Nuremberg Laws. Curved lines connect a text to the enforcement it is sourced as having shaped, and a closing thread marks its formal withdrawal by the Catholic Church in 1965 and the Lutherans in 1994.</p>
+    <div class="links" style="margin-top:4px">
+      <a class="btn" href="/object-record-timeline/" target="_blank" rel="noopener">Open the Object Record Timeline</a>
+      <a class="btn" href="/israel-gaza-focus/" target="_blank" rel="noopener">Open Israel and Gaza in Focus</a>
+      <a class="btn" href="/reprisal-line/" target="_blank" rel="noopener">Open The Reprisal Line</a>
+      <a class="btn" href="/charge-line/" target="_blank" rel="noopener">Open The Charge Line</a>
+      <a class="btn" href="/roadmap-of-hate/" target="_blank" rel="noopener">Open A Roadmap of Hate</a>
+      <a class="btn" href="/references/" target="_blank" rel="noopener">References</a>
+    </div>
 
-  <h2>The AI Timeline</h2>
-  <p><span class="label">Why I built it.</span> AI governance arguments keep skipping the history: who decided what, when, and why it mattered. This puts the full run on one page, from the first print-licensing laws to the current AI rulebook fights.</p>
-  <p><span class="label">What it does.</span> A sourced, graded record from 1455 to 2026, each entry tagged by era and by whether it is a word (law, paper, policy) or a practice (a machine, a deployed system), on two spines: technology and governance. A prologue traces print-era precedent (the Stationers' Company, the Licensing Act, the Statute of Anne) before the main run opens in 1943.</p>
-
-  <h2>The point</h2>
-  <p>The goal is to eliminate ignorance, my own first, by putting the evidence where you can see it and grade it yourself. No favorites. No unsourced numbers. Where specialists contest an object, it says so, and you decide.</p>
-
-  <div class="links" style="margin-top:22px">
-    <a class="btn" href="/object-record-timeline/" target="_blank" rel="noopener">Open the Object Record Timeline</a>
-    <a class="btn" href="/israel-gaza-focus/" target="_blank" rel="noopener">Open Israel and Gaza in Focus</a>
-    <a class="btn" href="/reprisal-line/" target="_blank" rel="noopener">Open The Reprisal Line</a>
-    <a class="btn" href="/charge-line/" target="_blank" rel="noopener">Open The Charge Line</a>
-    <a class="btn" href="/roadmap-of-hate/" target="_blank" rel="noopener">Open A Roadmap of Hate</a>
-    <a class="btn" href="/ai-timeline/" target="_blank" rel="noopener">Open the AI Timeline</a>
-    <a class="btn" href="/references/" target="_blank" rel="noopener">References</a>
+    <div class="gatebox">These five run alongside <b>Schrödinger's Mood</b>. Subscribing is free, donations are like tips for buskers: <a href="https://voxdw.substack.com" target="_blank" rel="noopener">Subscribe free at voxdw.substack.com</a>.</div>
   </div>
+
+  <div class="fam">
+    <div class="fam-head">
+      <h2>Speaking in Unearned Tongues</h2>
+      <span class="tier gated">Free Substack subscription</span>
+    </div>
+    <p style="margin-top:10px"><span class="label">Why I built it.</span> American history keeps getting told in parts. This ties the essay series to its own timeline, so the argument and the record sit side by side.</p>
+    <p><span class="label">What it does.</span> The sourced record behind the seven-part essay "Speaking in Unearned Tongues," on the same evidence rule as the rest of this page: a dated object or document counts, nothing else does.</p>
+    <div class="links">
+      <a class="btn" href="https://claude.ai/artifact/KVfC67BB1ankbugqyHKDJv" target="_blank" rel="noopener">Open the Unearned Tongues Timeline</a>
+      <a class="btn" href="https://voxdw.substack.com/p/speaking-in-unearned-tongues" target="_blank" rel="noopener">Read the essay series</a>
+    </div>
+    <div class="gatebox">This runs alongside <b>Schrödinger's Mood</b> too. Subscribing is free, donations are like tips for buskers: <a href="https://voxdw.substack.com" target="_blank" rel="noopener">Subscribe free at voxdw.substack.com</a>.</div>
+  </div>
+
+  <h2 style="margin-top:34px">The point</h2>
+  <p>The goal is to eliminate ignorance, my own first, by putting the evidence where you can see it and grade it yourself. No favorites. No unsourced numbers. Where specialists contest a record, it says so, and you decide.</p>
 
   <div class="foot">
   </div>
