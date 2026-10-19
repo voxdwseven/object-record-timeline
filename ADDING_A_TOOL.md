@@ -29,8 +29,9 @@ From the [Cloudflare Pages limits page](https://developers.cloudflare.com/pages/
    - Swap any claude.ai artifact link for the repo path when that page now lives here (`/charge-line/`, `/unearned-tongues/`).
    - Search the file for `claude.ai` and list whatever links remain for David. Some are deliberate, such as a link to the full book.
    - Change nothing else in the page. Content edits are their own request.
-4. **Add it to the hub page.** The top-level `index.html` has one pill and one box per family (`p-ai`, `p-or`, `p-ut`). A new tool in an existing family gets a button in that family's box. A new family gets a new pill, a new box styled in that timeline's own colors, a new entry in the `VIDEOS` list at the bottom of the file, and its tier tag ("Free, no subscription" or "Free Substack subscription").
-   - **Intro video:** in the `VIDEOS` list, fill in exactly one of `youtube` (the video ID), `vimeo` (the video ID), or `mp4` (the full link, such as a Wix video link). Leave all three blank and the box shows "Video coming soon." This matches the AI Tools intro-videos page on voxdw.com.
+4. **Add it to the hub page.** The top-level `index.html` has one pill and one box per family (`p-ai`, `p-or`, `p-ut`). A new tool in an existing family gets a button in that family's box. A new family gets a new pill, a new box styled in that timeline's own colors, and its tier tag ("Free, no subscription" or "Free Substack subscription").
+   - **Cover picture:** each box shows one picture card. Use a picture the timeline already uses and credits, copy it to `assets/covers/<folder-name>.jpg`, and copy its credit line into the caption under it.
+   - **Open buttons:** every button that opens a timeline carries `target="_blank" rel="noopener"`, so the timeline opens in a new tab at its own main page (`/<folder-name>/`).
    - **Direct link to a box:** `timelines.voxdw.com/?timeline=or` opens the Object Record box. Use `ai`, `or`, or `ut`.
 5. **Commit and push to `main`.** One commit per tool, with a message that names the tool and its new address.
 6. **Check it live.** Open the new address, open three or four cards, and confirm the pictures load. Open the hub page and click the new button.

@@ -35,9 +35,9 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
 .head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 .tag{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;border-radius:999px;padding:4px 12px;border:1px solid}
-.frame{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden}
-.frame iframe,.frame video{position:absolute;inset:0;width:100%;height:100%;border:0}
-.frame.soon{display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.cover{margin:0;border-radius:8px;overflow:hidden}
+.cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.cover figcaption{font-size:12.5px;line-height:1.45;padding:10px 14px}
 .panel p{margin:0}
 .legend{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:13px}
 .legend span{display:inline-flex;align-items:center;gap:7px}
@@ -54,7 +54,7 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
 #p-ai .kicker{color:#3FD3E6}
 #p-ai h2{font-size:24px;font-weight:900;color:#F3F2FA}
 #p-ai .tag{color:#3FD3E6;border-color:#3FD3E6}
-#p-ai .frame{background:#07061A;border:1px solid #2C2A5A;color:#A8A6C8}
+#p-ai .cover{background:#07061A;border:1px solid #2C2A5A;color:#A8A6C8}
 #p-ai .legend{font-family:var(--mono);font-size:12px;color:#A8A6C8}
 #p-ai .btn{color:#07061A;background:#3FD3E6;border-radius:8px}
 
@@ -63,7 +63,7 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
 #p-or .kicker{color:#5C4F3D}
 #p-or h2{font-family:var(--serif);font-size:27px;font-weight:700}
 #p-or .tag{color:#8F4325;border-color:#8F4325}
-#p-or .frame{background:#FAF4E6;border:1px solid #D6C39C;color:#5C4F3D;border-radius:4px}
+#p-or .cover{background:#FAF4E6;border:1px solid #D6C39C;color:#5C4F3D}
 #p-or .legend,#p-or .note{color:#5C4F3D}
 #p-or .grid a{color:#2B2117;background:#FAF4E6;border:1px solid #D6C39C}
 #p-or .grid a.main{color:#fff;background:#8F4325;border-color:#8F4325}
@@ -74,7 +74,7 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
 #p-ut .kicker{color:#6D5939;letter-spacing:.09em}
 #p-ut h2{font-family:var(--serif);font-size:27px;font-weight:700}
 #p-ut .tag{color:#2A1C0F;border-color:#A98750;background:#E7D3A1}
-#p-ut .frame{background:#E7D3A1;border:1px solid #BA9B64;color:#6D5939;border-radius:6px}
+#p-ut .cover{background:#E7D3A1;border:1px solid #BA9B64;color:#6D5939}
 #p-ut .sub{font-family:var(--serif);font-size:18px;font-weight:500;line-height:1.4}
 #p-ut .legend,#p-ut .note{color:#6D5939}
 #p-ut .btn{color:#FBF6E8;background:#4E6A5F}
@@ -103,7 +103,7 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
   <div class="eyebrow">Interactive timelines</div>
   <h1>Timelines</h1>
   <div class="bar"></div>
-  <p class="lede">Pick a timeline, watch the walkthrough, then open it.</p>
+  <p class="lede">Pick a timeline, then open it in a new tab.</p>
 
   <div class="pills" role="tablist" aria-label="Choose a timeline">
     <button type="button" role="tab" id="t-ai" aria-controls="p-ai" aria-selected="true" data-key="ai">The AI Timeline</button>
@@ -116,13 +116,16 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
       <div><div class="kicker">1455 to 2026</div><h2>The AI Timeline</h2></div>
       <span class="tag">Free, no subscription</span>
     </div>
-    <div class="frame" data-video="ai"></div>
+    <figure class="cover">
+      <img src="/assets/covers/ai-timeline.jpg" alt="Control panel of the IBM 701, the machine IBM used for the 1954 Georgetown-IBM translation demonstration" style="object-position:50% 30%">
+      <figcaption><b>IBM 701 console.</b> The machine that ran the 1954 Georgetown-IBM translation demonstration, an entry in the AI Timeline. Photo Dan, 2009, Wikimedia Commons, CC BY 2.0.</figcaption>
+    </figure>
     <p>A sourced, graded record from 1455 to 2026. Each entry is tagged by era and by whether it is a word (law, paper, policy) or a practice (a machine, a deployed system), on two spines: technology and governance. A prologue traces print-era precedent (the Stationers' Company, the Licensing Act, the Statute of Anne) before the main run opens in 1943.</p>
     <div class="legend">
       <span><span class="dot" style="background:#3FD3E6"></span>Technology spine</span>
       <span><span class="dot" style="background:#D24FE0"></span>Governance spine</span>
     </div>
-    <a class="btn" href="/ai-timeline/">Open the AI Timeline</a>
+    <a class="btn" href="/ai-timeline/" target="_blank" rel="noopener">Open the AI Timeline</a>
   </section>
 
   <section class="panel" id="p-or" role="tabpanel" aria-labelledby="t-or" hidden>
@@ -130,7 +133,10 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
       <div><div class="kicker">Five tools and a references page</div><h2>The Object Record</h2></div>
       <span class="tag">Free Substack subscription</span>
     </div>
-    <div class="frame" data-video="or"></div>
+    <figure class="cover">
+      <img src="/assets/covers/object-record.jpg" alt="Close-up of line 27 of the Merneptah Stele, with the hieroglyphs that name Israel">
+      <figcaption><b>Merneptah Stele, line 27, c. 1208 BCE.</b> The first known mention of Israel, the first entry in the Object Record. Egyptian Museum, Cairo. Photo Darer101, Wikimedia Commons, CC BY-SA 4.0.</figcaption>
+    </figure>
     <p>I built this to tell Jewish history by what survives, and to judge every claim by the evidence behind it. All five tools run on the same rule: a real object or a dated document counts, hearsay does not, and scripture read as history does not.</p>
     <div class="legend">
       <span><span class="chip" style="background:#2E4A8B">A</span>contemporary object or document</span>
@@ -139,12 +145,12 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
       <span><span class="chip" style="background:#A3392C">X</span>contested by specialists</span>
     </div>
     <div class="grid">
-      <a class="main" href="/object-record-timeline/">Object Record Timeline</a>
-      <a href="/israel-gaza-focus/">Israel and Gaza in Focus</a>
-      <a href="/reprisal-line/">The Reprisal Line</a>
-      <a href="/charge-line/">The Charge Line</a>
-      <a href="/roadmap-of-hate/">A Roadmap of Hate</a>
-      <a href="/references/">References</a>
+      <a class="main" href="/object-record-timeline/" target="_blank" rel="noopener">Object Record Timeline</a>
+      <a href="/israel-gaza-focus/" target="_blank" rel="noopener">Israel and Gaza in Focus</a>
+      <a href="/reprisal-line/" target="_blank" rel="noopener">The Reprisal Line</a>
+      <a href="/charge-line/" target="_blank" rel="noopener">The Charge Line</a>
+      <a href="/roadmap-of-hate/" target="_blank" rel="noopener">A Roadmap of Hate</a>
+      <a href="/references/" target="_blank" rel="noopener">References</a>
     </div>
     <p class="note">These run alongside Schrödinger's Mood. Subscribing is free, donations are like tips for buskers: <a href="https://voxdw.substack.com">subscribe free at voxdw.substack.com</a>.</p>
   </section>
@@ -154,7 +160,10 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
       <div><div class="kicker">Full-book timeline, 6000 BCE to 2026</div><h2>Speaking in Unearned Tongues</h2></div>
       <span class="tag">Free Substack subscription</span>
     </div>
-    <div class="frame" data-video="ut"></div>
+    <figure class="cover">
+      <img src="/assets/covers/unearned-tongues.jpg" alt="John Trumbull's painting of the drafting committee presenting the Declaration of Independence to Congress">
+      <figcaption><b>Declaration of Independence, John Trumbull, 1819.</b> The drafting committee presents its work to Congress. U.S. Capitol, Wikimedia Commons, public domain.</figcaption>
+    </figure>
     <p class="sub">A history of the promises America made and the debts it left unpaid, 6000 BCE to 2026.</p>
     <p>The sourced record behind the seven-part essay "Speaking in Unearned Tongues," on the same evidence rule as the rest of this page: a dated object or document counts, nothing else does.</p>
     <div class="legend">
@@ -163,7 +172,7 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
       <span><span class="chip" style="background:#A23A26">X</span>contested</span>
     </div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px">
-      <a class="btn" href="/unearned-tongues/">Open the Unearned Tongues Timeline</a>
+      <a class="btn" href="/unearned-tongues/" target="_blank" rel="noopener">Open the Unearned Tongues Timeline</a>
       <a class="plain" href="https://voxdw.substack.com/p/speaking-in-unearned-tongues">Read the essay series</a>
     </div>
     <p class="note">This runs alongside Schrödinger's Mood too. Subscribing is free, donations are like tips for buskers: <a href="https://voxdw.substack.com">subscribe free at voxdw.substack.com</a>.</p>
@@ -181,37 +190,6 @@ h1{margin:6px 0 0;color:var(--gold);font-size:30px;font-weight:900}
 </div>
 
 <script>
-/* Intro videos. Fill in exactly one of youtube (video ID), vimeo (video ID), or mp4 (full URL)
-   for each timeline. A timeline with all three blank shows "Video coming soon".
-   Same format as the AI Tools intro-videos page on voxdw.com. */
-var VIDEOS = {
-  ai: { youtube: "", vimeo: "", mp4: "" },
-  or: { youtube: "", vimeo: "", mp4: "" },
-  ut: { youtube: "", vimeo: "", mp4: "" }
-};
-
-function fillVideo(frame, v) {
-  frame.innerHTML = "";
-  frame.className = "frame";
-  var node = null;
-  if (v.youtube) {
-    node = document.createElement("iframe");
-    node.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.youtube);
-    node.allow = "accelerometer; encrypted-media; picture-in-picture; fullscreen";
-    node.allowFullscreen = true;
-  } else if (v.vimeo) {
-    node = document.createElement("iframe");
-    node.src = "https://player.vimeo.com/video/" + encodeURIComponent(v.vimeo);
-    node.allow = "fullscreen; picture-in-picture";
-    node.allowFullscreen = true;
-  } else if (v.mp4) {
-    node = document.createElement("video");
-    node.controls = true; node.preload = "metadata"; node.src = v.mp4;
-  }
-  if (node) { node.title = "Intro video"; frame.appendChild(node); }
-  else { frame.className = "frame soon"; frame.textContent = "Video coming soon"; }
-}
-
 var tabs = Array.prototype.slice.call(document.querySelectorAll('.pills [role="tab"]'));
 function show(key) {
   tabs.forEach(function (t) {
@@ -220,8 +198,6 @@ function show(key) {
     t.tabIndex = on ? 0 : -1;
     var panel = document.getElementById(t.getAttribute("aria-controls"));
     panel.hidden = !on;
-    var frame = panel.querySelector(".frame");
-    if (on) fillVideo(frame, VIDEOS[key]); else frame.innerHTML = "";
   });
   try { history.replaceState(null, "", "?timeline=" + key); } catch (e) {}
 }
@@ -235,7 +211,7 @@ tabs.forEach(function (t, i) {
   });
 });
 var start = new URLSearchParams(location.search).get("timeline");
-show(VIDEOS.hasOwnProperty(start) ? start : "ai");
+show(["ai","or","ut"].indexOf(start) > -1 ? start : "ai");
 </script>
 </body>
 </html>
